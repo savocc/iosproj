@@ -10,9 +10,9 @@ import youtube_ios_player_helper
 
 class MoviesPlayerController: UIViewController, YTPlayerViewDelegate {
     
-    @IBOutlet weak var lblSongName: UILabel!
+    @IBOutlet weak var lblMovieTitle: UILabel!
     
-    @IBOutlet weak var lblArtistName: UILabel!
+    @IBOutlet weak var imagePoster: UIImageView!
     
     let suggestionsController = SuggestionsController()
     
@@ -21,72 +21,38 @@ class MoviesPlayerController: UIViewController, YTPlayerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         playerView.delegate = self
-        let videoID = suggestionsController.happierMusic.randomElement() ?? ""
+//        let videoID = suggestionsController.happierMovie.randomElement() ?? ""
+        let videoID = suggestionsController.movies.randomElement() ?? ""
         playerView.load(withVideoId: videoID, playerVars: ["playsinline": 1])
         
-        if videoID == "U5TqIdff_DQ" && videoID != "" {
-            lblSongName.text = "I Feel Good"
-            lblArtistName.text = "James Brown"
+        if videoID == "pvQZfLavWfU" && videoID != "" {
+            lblMovieTitle.text = "The Tree of Life"
+            imagePoster.image = UIImage(named: "the_tree_of_life")
         }
         
-        if videoID == "LSJKz9iAjgY" && videoID != "" {
-            lblSongName.text = "Who's Laughing Now"
-            lblArtistName.text = "Ava Max"
+        if videoID == "uvbavW31adA" && videoID != "" {
+            lblMovieTitle.text = "Gladiator"
+            imagePoster.image = UIImage(named: "gladiator")
         }
         
-        if videoID == "l2UiY2wivTs" && videoID != "" {
-            lblSongName.text = "Lemon Tree"
-            lblArtistName.text = "Fools Garden"
+        if videoID == "uPIEn0M8su0" && videoID != "" {
+            lblMovieTitle.text = "Forrest Gump"
+            imagePoster.image = UIImage(named: "forrest_gump")
         }
         
-        if videoID == "7bTPwmg_cWo" && videoID != "" {
-            lblSongName.text = "Lost & Found"
-            lblArtistName.text = "Mackenzie Bourg"
+        if videoID == "xOsLIiBStEs" && videoID != "" {
+            lblMovieTitle.text = "Soul"
+            imagePoster.image = UIImage(named: "soul")
         }
         
-        if videoID == "qpiilPFQtwM" && videoID != "" {
-            lblSongName.text = "Play Hard"
-            lblArtistName.text = "David Guetta"
+        if videoID == "FF_rYNupPwg" && videoID != "" {
+            lblMovieTitle.text = "Chef"
+            imagePoster.image = UIImage(named: "chef")
         }
         
-        if videoID == "y1IlYTmX2hI" && videoID != "" {
-            lblSongName.text = "Lost & Found"
-            lblArtistName.text = "Mackenzie Bourg"
-        }
-        
-        if videoID == "7bTPwmg_cWo" && videoID != "" {
-            lblSongName.text = "Don't Say Goodbye"
-            lblArtistName.text = "Alok"
-        }
-        
-        if videoID == "TdrL3QxjyVw" && videoID != "" {
-            lblSongName.text = "Summertime Sadness"
-            lblArtistName.text = "Lana Del Rey"
-        }
-        
-        if videoID == "osdoLjUNFnA" && videoID != "" {
-            lblSongName.text = "Exile"
-            lblArtistName.text = "Taylor Swift"
-        }
-        
-        if videoID == "UfcAVejslrU" && videoID != "" {
-            lblSongName.text = "Weightless"
-            lblArtistName.text = "Macaroni Uniony"
-        }
-        
-        if videoID == "UV-xydIde9I" && videoID != "" {
-            lblSongName.text = "Sweatshirt (Don't Let Go)"
-            lblArtistName.text = "A N X"
-        }
-        
-        if videoID == "U5TqIdff_DQ" && videoID != "" {
-            lblSongName.text = "I Feel Good"
-            lblArtistName.text = "James Brown"
-        }
         
         if videoID == "" {
-            lblSongName.text = ""
-            lblArtistName.text = ""
+            lblMovieTitle.text = ""
         }
     }
     

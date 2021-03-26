@@ -39,39 +39,57 @@ class GameController: UIViewController {
         
         let userInput =  inputResult.text ?? ""
         
+        // Check if the input is empty
         if inputResult.text == nil || inputResult.text == "" {
+            // Turn the lblResult to red
             lblResult.textColor = UIColor.red
+            
+            // Print to lblResult
             lblResult.text = "Please enter a word!"
+            
+            // Clear the input text
             inputResult.text = ""
         }
         
+        // Check if user input does not exists in the crossword
         else if !happierWords.contains(userInput.lowercased()) {
+            // Turn the lblResult to red
             lblResult.textColor = UIColor.red
+            
+            // Print to lblResult
             lblResult.text = "The word '\(userInput.lowercased())' is wrong!\n Try again!"
         }
         
+        // Checking if user input exists in the crossword and if is not the last word to find
         else if happierWords.contains(userInput.lowercased()) && (counter > 1) {
+            
+            // Checking if user input is not already found
             if foundArray.contains(userInput.lowercased()) == false {
                 lblWordsFound.text = ""
                 lblResult.textColor = UIColor.black
                 counter -= 1
                 lblResult.text = "You found '\(userInput.lowercased())'!\nThere is \(counter) to go"
                 inputResult.text = ""
+                
+                // adding the new word found to the array
                 foundArray.append(userInput.lowercased())
+                
+                // print the words that was already found
+                for word in foundArray {
+                    lblWordsFound.text! += "\(word)\n"
+                }
             }
+            
+            // checking if user input is already found
             else if foundArray.contains(userInput.lowercased()) {
                 inputResult.text = ""
                 lblResult.textColor = UIColor.red
                 lblResult.text = "You already found '\(userInput.lowercased())'!\nThere is \(counter) to go"
             }
             
-            // print the words that was already found
-            for word in foundArray {
-                lblWordsFound.text! += "\(word)\n"
-            }
-            
         }
         
+        // Checking if user input exists in the crossword and if is the last word to find
         else if happierWords.contains(userInput.lowercased()) && (counter == 1) && foundArray.contains(userInput.lowercased()) == false {
             lblWordsFound.text = ""
             lblResult.textColor = UIColor.blue

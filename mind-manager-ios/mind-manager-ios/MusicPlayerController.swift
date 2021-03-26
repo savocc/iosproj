@@ -21,7 +21,7 @@ class MusicPlayerController: UIViewController, YTPlayerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         playerView.delegate = self
-        let videoID = suggestionsController.happierMusic.randomElement() ?? ""
+        let videoID = suggestionsController.happierMovie.randomElement() ?? ""
         playerView.load(withVideoId: videoID, playerVars: ["playsinline": 1])
         
         if videoID == "U5TqIdff_DQ" && videoID != "" {
