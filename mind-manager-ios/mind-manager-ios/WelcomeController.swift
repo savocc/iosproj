@@ -2,13 +2,12 @@
 //  ViewController.swift
 //  mind-manager-ios
 //
-//  Created by Bruna Bispo on 05/03/21.
+//  Created by Fantastic Five on 05/03/21.
 //
 
-import SideMenu
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeController: UIViewController{
     
     // More Moody option
     @IBAction func btnMoody(_ sender: Any) {
@@ -40,29 +39,13 @@ class ViewController: UIViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        // Get rid of menu bar - all the pages
-        // self.navigationController?.navigationBar.isHidden = true
-        
-        // Creating the side menu
-        menu = SideMenuNavigationController(rootViewController: MenuListController())
-//        menu?.setNavigationBarHidden(true, animated: false)
-        
-        // Slide to open the menu
-        SideMenuManager.default.rightMenuNavigationController = menu
-        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+
     }
     
-    // Creating the side menu
-    var menu: SideMenuNavigationController?
+    @IBOutlet weak var lblLogin: UIBarButtonItem!
     
-    @IBAction func didTapMenu() {
-        present(menu!, animated: true)
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "moreMoody" ||
