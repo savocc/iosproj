@@ -35,7 +35,7 @@ class SuggestionsController: UIViewController{
     
     // Energetic
     var energeticSport = ["Laser-Tag", "Running"]
-    var energeticActivity = ["Dance","Run"]
+    var energeticActivity = ["Dance","Run", "Fitness", "Gymnastic"]
     var energeticReading = ["Hunger Games - Suzanne Collins",
                          "Harry Potter and the Goblet of Fire - J. K. Rolling"]
     var energeticMovie = ["uvbavW31adA"]
