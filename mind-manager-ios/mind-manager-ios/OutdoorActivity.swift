@@ -11,7 +11,7 @@ import UIKit
  
 class OutdoorController: UIViewController {
     let suggestionsController = SuggestionsController()
-
+//for now using energetic activity
     @IBOutlet weak var lblActivity: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
