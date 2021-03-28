@@ -6,91 +6,80 @@
 //
 
 import UIKit
-import youtube_ios_player_helper
-
-class MusicPlayerController: UIViewController, YTPlayerViewDelegate {
+ 
+class MusicPlayerController: UIViewController {
     
-    @IBOutlet weak var lblSongName: UILabel!
+ 
+    @IBOutlet weak var songName: UILabel!
     
-    @IBOutlet weak var lblArtistName: UILabel!
-    
+    @IBOutlet weak var artistName: UILabel!
     let suggestionsController = SuggestionsController()
     
-    @IBOutlet var playerView: YTPlayerView!
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        playerView.delegate = self
-        let videoID = suggestionsController.happierMovie.randomElement() ?? ""
-        playerView.load(withVideoId: videoID, playerVars: ["playsinline": 1])
-        
-        if videoID == "U5TqIdff_DQ" && videoID != "" {
-            lblSongName.text = "I Feel Good"
-            lblArtistName.text = "James Brown"
+        let control = suggestionsController.happierMusic.randomElement();
+ 
+        if control == "U5TqIdff_DQ"   {
+            songName.text = "I Feel Good"
+            artistName.text = "James Brown"
         }
         
-        if videoID == "LSJKz9iAjgY" && videoID != "" {
-            lblSongName.text = "Who's Laughing Now"
-            lblArtistName.text = "Ava Max"
+        if control == "LSJKz9iAjgY" {
+            songName.text = "Who's Laughing Now"
+            artistName.text = "Ava Max"
         }
         
-        if videoID == "l2UiY2wivTs" && videoID != "" {
-            lblSongName.text = "Lemon Tree"
-            lblArtistName.text = "Fools Garden"
+        if control == "l2UiY2wivTs"  {
+            songName.text = "Lemon Tree"
+            artistName.text = "Fools Garden"
         }
         
-        if videoID == "7bTPwmg_cWo" && videoID != "" {
-            lblSongName.text = "Lost & Found"
-            lblArtistName.text = "Mackenzie Bourg"
+        if control == "7bTPwmg_cWo"  {
+            songName.text = "Lost & Found"
+            artistName.text = "Mackenzie Bourg"
         }
         
-        if videoID == "qpiilPFQtwM" && videoID != "" {
-            lblSongName.text = "Play Hard"
-            lblArtistName.text = "David Guetta"
+        if control == "qpiilPFQtwM"   {
+            songName.text = "Play Hard"
+            artistName.text = "David Guetta"
         }
         
-        if videoID == "y1IlYTmX2hI" && videoID != "" {
-            lblSongName.text = "Lost & Found"
-            lblArtistName.text = "Mackenzie Bourg"
+        if control == "y1IlYTmX2hI"   {
+            songName.text = "Lost & Found"
+            artistName.text = "Mackenzie Bourg"
         }
         
-        if videoID == "7bTPwmg_cWo" && videoID != "" {
-            lblSongName.text = "Don't Say Goodbye"
-            lblArtistName.text = "Alok"
+        if control == "7bTPwmg_cWo"   {
+            songName.text = "Don't Say Goodbye"
+            artistName.text = "Alok"
         }
         
-        if videoID == "TdrL3QxjyVw" && videoID != "" {
-            lblSongName.text = "Summertime Sadness"
-            lblArtistName.text = "Lana Del Rey"
+        if control == "TdrL3QxjyVw"   {
+            songName.text = "Summertime Sadness"
+            artistName.text = "Lana Del Rey"
         }
         
-        if videoID == "osdoLjUNFnA" && videoID != "" {
-            lblSongName.text = "Exile"
-            lblArtistName.text = "Taylor Swift"
+        if control == "osdoLjUNFnA"   {
+            songName.text = "Exile"
+            artistName.text = "Taylor Swift"
         }
         
-        if videoID == "UfcAVejslrU" && videoID != "" {
-            lblSongName.text = "Weightless"
-            lblArtistName.text = "Macaroni Uniony"
+        if control == "UfcAVejslrU"   {
+            songName.text = "Weightless"
+            artistName.text = "Macaroni Uniony"
         }
         
-        if videoID == "UV-xydIde9I" && videoID != "" {
-            lblSongName.text = "Sweatshirt (Don't Let Go)"
-            lblArtistName.text = "A N X"
+        if control == "UV-xydIde9I"   {
+            songName.text = "Sweatshirt (Don't Let Go)"
+            artistName.text = "A N X"
         }
         
-        if videoID == "U5TqIdff_DQ" && videoID != "" {
-            lblSongName.text = "I Feel Good"
-            lblArtistName.text = "James Brown"
+        if control == "U5TqIdff_DQ"   {
+            songName.text = "I Feel Good"
+            artistName.text = "James Brown"
         }
-        
-        if videoID == "" {
-            lblSongName.text = ""
-            lblArtistName.text = ""
-        }
-    }
+     }
     
-    func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
-        playerView.playVideo()
-    }
+ 
 }

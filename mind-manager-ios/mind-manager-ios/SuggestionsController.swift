@@ -35,9 +35,11 @@ class SuggestionsController: UIViewController{
     
     // Energetic
     var energeticSport = ["Laser-Tag", "Running"]
+    var energeticActivity = ["Dance","Run"]
     var energeticReading = ["Hunger Games - Suzanne Collins",
                          "Harry Potter and the Goblet of Fire - J. K. Rolling"]
     var energeticMovie = ["uvbavW31adA"]
+    var energeticMusic = ["qpiilPFQtwM", "y1IlYTmX2hI"]
     // ["Gladiator"]
     
     // Happier
@@ -45,6 +47,7 @@ class SuggestionsController: UIViewController{
     var happierReading = ["Diary of a Wimpy Kid - Jeff Kinney",
                          "Happiness is a direction, not a place - Sydney J. Harris"]
     var happierMovie = ["uPIEn0M8su0"]
+    var happierMusic = ["U5TqIdff_DQ", "LSJKz9iAjgY"]
     // ["Forest Gump"]
     
     // Moody
@@ -52,10 +55,11 @@ class SuggestionsController: UIViewController{
     var moodyReading = ["Two sides on every coin,\nThe heads and the tails.\nTwo sides of the same coin,\nThe successes and the fails. (...)\nDoug Buchanan",
                          "The Fault in Our Stars - John Green"]
     var moodyMovie = ["xOsLIiBStEs"]
-    // ["Soul"]
+     // ["Soul"]
     
     // Relaxed
     var relaxedSport = ["Yoga", "Biking"]
+    var relaxedMusic = ["UfcAVejslrU", "UV-xydIde9I"]
     var relaxedReading = ["Time says 'Let there be'\nevery moment and instantly\nthere is space and the radiance\nof each bright galaxy. (...)\nUrsula K. Le Guin",
                          "Relax. Let every moment be what it's going to be.\nWhat's meant to be will come your way,\nwhat's not will fade away.\nUnknown"]
     var relaxedMovie = ["FF_rYNupPwg"]
