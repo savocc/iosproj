@@ -14,6 +14,7 @@ class SportController: UIViewController {
     @IBOutlet weak var lblSport: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //for now using moodySport
         let control = suggestionsController.moodySport.randomElement();
         lblSport.text = control;
      }
