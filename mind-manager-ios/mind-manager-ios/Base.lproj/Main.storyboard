@@ -491,19 +491,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gbc" translatesAutoresizingMaskIntoConstraints="NO" id="xgh-D7-Hkd">
-                                <rect key="frame" x="20" y="498" width="83" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="George Brown College" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFq-b0-6Ck">
-                                <rect key="frame" x="111" y="471" width="283" height="41"/>
+                                <rect key="frame" x="111" y="539" width="283" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TI-cm-Vwp">
-                                <rect key="frame" x="111" y="524" width="283" height="60"/>
+                                <rect key="frame" x="111" y="607" width="283" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Computer Programmer 
 Analyst</string>
@@ -518,6 +514,10 @@ Analyst</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gbc" translatesAutoresizingMaskIntoConstraints="NO" id="xgh-D7-Hkd">
+                                <rect key="frame" x="20" y="571" width="83" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pBN-YJ-BFT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -561,7 +561,7 @@ Analyst</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt8-bI-vpm">
-                                <rect key="frame" x="20" y="321" width="374" height="401"/>
+                                <rect key="frame" x="20" y="232" width="374" height="401"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">This app is meant to be for pure recreational purposes, in finding daily activities based on mood selections.   The app is not intended to be a replacement for professional mental health services or medications. If you are in need of those services, please seek professional assistance.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
